@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <a href="/">
+                <li>Home</li>
+            </a>
+            <a href="/products">
+                <li>Catalogo</li>
+            </a>
+            <a href="/products/create">
+                <li>Alta de producto</li>
+            </a>
+            <a href="/users/signin">
+                <li>Registro</li>
+            </a>
+            <a href="/users/login">
+                <li>Login</li>
+            </a>
+        </ul>
+    </nav>
+    <h1><%= title %></h1>
+    <form action="/products/create" method="POST">
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre" id="nombre">
+        <br>
+        <label>Detalle</label>
+        <textarea type="text" name="detalle" id="detalle"> </textarea>
+        <br>
+        <label for="precio">Precio</label>
+        <input type="number" name="precio" id="precio">
+        <br>
+        <button> Crear</button>
+    </form>
+</body>
+
+</html>

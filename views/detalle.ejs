@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Detalle de producto</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <a href="/">
+        <li>Home</li>
+      </a>
+      <a href="/products">
+        <li>Catalogo</li>
+      </a>
+      <a href="/products/create">
+        <li>Alta de producto</li>
+      </a>
+      <a href="/users/signin">
+        <li>Registro</li>
+      </a>
+      <a href="/users/login">
+        <li>Login</li>
+      </a>
+    </ul>
+  </nav>
+  <% detalles.forEach(function(detalle){ %>
+  <h1><%= detalle.nombre %></h1>
+  
+    <div style="border: 1px dotted #c3c3c3; padding: 20px; margin: 10px;">
+      <h2><%= detalle.nombre %></h2>
+      <p><%= detalle.detalle %></p>
+      <span>$ <%= detalle.precio %></span>
+    </div>
+    <% }) %>
+</body>
+</html>
